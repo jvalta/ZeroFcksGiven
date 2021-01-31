@@ -43,8 +43,8 @@ namespace ZeroFcksGiven
                 {
                     if (secondArgument == null)
                     {
-                        MessageBox.Show("Sorry, but the expected window handle was not provided.",""
-                            ,MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Sorry, but the expected window handle was not provided.", ""
+                            , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
 
@@ -54,6 +54,7 @@ namespace ZeroFcksGiven
                 else if (firstArgument == "/s") // Full-screen mode
                 {
                     ShowScreenSaver();
+
                     Application.Run();
                 }
                 else // Undefined argument
@@ -73,11 +74,15 @@ namespace ZeroFcksGiven
         }
         static void ShowScreenSaver()
         {
+
             foreach (Screen screen in Screen.AllScreens)
             {
                 ScreenSaverForm screenSaver = new ScreenSaverForm(screen.Bounds);
                 screenSaver.Show();
+                Form form1 = new Form1();
+                form1.Show();
             }
         }
+
     }
 }
