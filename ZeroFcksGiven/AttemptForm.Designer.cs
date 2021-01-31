@@ -1,6 +1,6 @@
 ﻿namespace ZeroFcksGiven
 {
-    partial class Form1
+    partial class AttemptForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblAttempt = new System.Windows.Forms.Label();
+            this.tmrProgress = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnCancel
@@ -49,6 +51,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(400, 25);
             this.progressBar1.TabIndex = 1;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // lblAttempt
             // 
@@ -59,6 +62,12 @@
             this.lblAttempt.Size = new System.Drawing.Size(205, 20);
             this.lblAttempt.TabIndex = 2;
             this.lblAttempt.Text = "Attempting to give a fuck...";
+            // 
+            // tmrProgress
+            // 
+            this.tmrProgress.Enabled = true;
+            this.tmrProgress.Interval = 1000;
+            this.tmrProgress.Tick += new System.EventHandler(this.tmrProgress_Tick);
             // 
             // Form1
             // 
@@ -73,7 +82,8 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Attempting...";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -87,5 +97,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblAttempt;
+        private System.Windows.Forms.Timer tmrProgress;
     }
 }

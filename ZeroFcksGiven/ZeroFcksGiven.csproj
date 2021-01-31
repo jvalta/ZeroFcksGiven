@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AttemptForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AttemptForm.Designer.cs">
+      <DependentUpon>AttemptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ScreenSaverForm.cs">
       <SubType>Form</SubType>
@@ -75,8 +75,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AttemptForm.resx">
+      <DependentUpon>AttemptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScreenSaverForm.resx">
       <DependentUpon>ScreenSaverForm.cs</DependentUpon>

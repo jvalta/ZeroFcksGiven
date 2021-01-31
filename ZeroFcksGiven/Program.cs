@@ -54,7 +54,6 @@ namespace ZeroFcksGiven
                 else if (firstArgument == "/s") // Full-screen mode
                 {
                     ShowScreenSaver();
-
                     Application.Run();
                 }
                 else // Undefined argument
@@ -79,9 +78,10 @@ namespace ZeroFcksGiven
             {
                 ScreenSaverForm screenSaver = new ScreenSaverForm(screen.Bounds);
                 screenSaver.Show();
-                Form form1 = new Form1();
-                form1.Show();
+
             }
+            Form attemptForm = new AttemptForm();
+            attemptForm.Show();
         }
 
     }
