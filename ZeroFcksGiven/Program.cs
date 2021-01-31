@@ -43,8 +43,8 @@ namespace ZeroFcksGiven
                 {
                     if (secondArgument == null)
                     {
-                        MessageBox.Show("Sorry, but the expected window handle was not provided.",
-                            "Screensaver", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Sorry, but the expected window handle was not provided.",""
+                            ,MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
 
