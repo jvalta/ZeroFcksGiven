@@ -67,6 +67,12 @@
     <Compile Include="AttemptForm.Designer.cs">
       <DependentUpon>AttemptForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FailedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FailedForm.Designer.cs">
+      <DependentUpon>FailedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScreenSaverForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AttemptForm.resx">
       <DependentUpon>AttemptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FailedForm.resx">
+      <DependentUpon>FailedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScreenSaverForm.resx">
       <DependentUpon>ScreenSaverForm.cs</DependentUpon>

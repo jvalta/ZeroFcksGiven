@@ -82,6 +82,7 @@ namespace ZeroFcksGiven
             }
             Form attemptForm = new AttemptForm();
             attemptForm.Show();
+
         }
 
     }
