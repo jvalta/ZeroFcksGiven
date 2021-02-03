@@ -79,10 +79,9 @@ namespace ZeroFcksGiven
                 ScreenSaverForm screenSaver = new ScreenSaverForm(screen.Bounds);
                 screenSaver.Show();
 
-            }
-            Form attemptForm = new AttemptForm();
-            attemptForm.Show();
-
+                Form attemptForm = new AttemptForm();
+                attemptForm.Show();
+            }        
         }
 
     }

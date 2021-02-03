@@ -44,7 +44,7 @@ namespace ZeroFcksGiven
                 failedForm.Show();
                 this.Close();
             }
-            //return;
+            
 
 
         }

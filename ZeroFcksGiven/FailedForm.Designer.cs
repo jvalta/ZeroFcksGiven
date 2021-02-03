@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblFailed = new System.Windows.Forms.Label();
             this.lblErrorID = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.tmrFailedForm = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblFailed
@@ -62,6 +64,12 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // tmrFailedForm
+            // 
+            this.tmrFailedForm.Enabled = true;
+            this.tmrFailedForm.Interval = 1000;
+            this.tmrFailedForm.Tick += new System.EventHandler(this.tmrFailedForm_Tick);
+            // 
             // FailedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -89,5 +97,6 @@
         private System.Windows.Forms.Label lblFailed;
         private System.Windows.Forms.Label lblErrorID;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer tmrFailedForm;
     }
 }

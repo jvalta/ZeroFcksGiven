@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ZeroFcksGiven
 {
+
     public partial class FailedForm : Form
     {
         public FailedForm()
@@ -18,6 +19,11 @@ namespace ZeroFcksGiven
         }
 
         private void FailedForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrFailedForm_Tick(object sender, EventArgs e)
         {
 
         }
