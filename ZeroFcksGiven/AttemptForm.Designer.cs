@@ -33,17 +33,20 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblAttempt = new System.Windows.Forms.Label();
             this.tmrProgress = new System.Windows.Forms.Timer(this.components);
+            this.lblAtt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCancel.Enabled = false;
             this.btnCancel.Location = new System.Drawing.Point(367, 140);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // progressBar1
             // 
@@ -69,12 +72,21 @@
             this.tmrProgress.Interval = 1000;
             this.tmrProgress.Tick += new System.EventHandler(this.tmrProgress_Tick);
             // 
+            // lblAtt
+            // 
+            this.lblAtt.AutoSize = true;
+            this.lblAtt.Location = new System.Drawing.Point(46, 140);
+            this.lblAtt.Name = "lblAtt";
+            this.lblAtt.Size = new System.Drawing.Size(0, 13);
+            this.lblAtt.TabIndex = 3;
+            // 
             // AttemptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 211);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAtt);
             this.Controls.Add(this.lblAttempt);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnCancel);
@@ -82,10 +94,13 @@
             this.MaximizeBox = false;
             this.Name = "AttemptForm";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Attempting...";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.AttemptForm_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AttemptForm_KeyPress);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AttemptForm_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AttemptForm_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +112,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblAttempt;
         private System.Windows.Forms.Timer tmrProgress;
+        private System.Windows.Forms.Label lblAtt;
     }
 }

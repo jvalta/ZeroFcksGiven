@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblFailed = new System.Windows.Forms.Label();
             this.lblErrorID = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tmrFailedForm = new System.Windows.Forms.Timer(this.components);
+            this.btnOk = new System.Windows.Forms.Button();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFailed
@@ -55,20 +54,23 @@
             this.lblErrorID.TabIndex = 1;
             this.lblErrorID.Text = "ID:10T ERROR";
             // 
-            // button1
+            // btnOk
             // 
-            this.button1.Location = new System.Drawing.Point(155, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOk.Location = new System.Drawing.Point(155, 162);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 2;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.BtnOK);
             // 
-            // tmrFailedForm
+            // lblTimer
             // 
-            this.tmrFailedForm.Enabled = true;
-            this.tmrFailedForm.Interval = 1000;
-            this.tmrFailedForm.Tick += new System.EventHandler(this.tmrFailedForm_Tick);
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(48, 118);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 17);
+            this.lblTimer.TabIndex = 3;
             // 
             // FailedForm
             // 
@@ -76,7 +78,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lblErrorID);
             this.Controls.Add(this.lblFailed);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
@@ -87,6 +90,9 @@
             this.Text = "FAILED";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FailedForm_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FailedForm_KeyPress);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FailedForm_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FailedForm_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,7 +102,7 @@
 
         private System.Windows.Forms.Label lblFailed;
         private System.Windows.Forms.Label lblErrorID;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Timer tmrFailedForm;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label lblTimer;
     }
 }

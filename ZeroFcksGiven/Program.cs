@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,18 +71,22 @@ namespace ZeroFcksGiven
                        "ScreenSaver", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-        }
-        static void ShowScreenSaver()
-        {
+        }      
 
+        static void ShowScreenSaver()
+        {         
             foreach (Screen screen in Screen.AllScreens)
             {
                 ScreenSaverForm screenSaver = new ScreenSaverForm(screen.Bounds);
                 screenSaver.Show();
-
-                Form attemptForm = new AttemptForm();
-                attemptForm.Show();
+                Program.ShowAttForm();
             }        
+        }
+
+        public static void ShowAttForm()
+        {
+            Form attemptForm = new AttemptForm();
+            attemptForm.Show();
         }
 
     }

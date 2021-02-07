@@ -55,7 +55,7 @@ namespace ZeroFcksGiven
 
         private void ScreenSaverForm_Load(object sender, EventArgs e)
         {
-            Cursor.Hide();
+            //Cursor.Hide();
             TopMost = true;
         }
 
@@ -64,8 +64,8 @@ namespace ZeroFcksGiven
             Application.Exit();
         }
 
-        private Point mouseLocation;
-        private void ScreenSaverForm_MouseMove(object sender, MouseEventArgs e)
+        public Point mouseLocation;
+        public void ScreenSaverForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (!mouseLocation.IsEmpty)
             {
