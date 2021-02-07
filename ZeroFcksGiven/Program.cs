@@ -65,7 +65,7 @@ namespace ZeroFcksGiven
                 }
 
             }
-            else    // No arguments - treat like /c.
+            else    // No arguments - treat like /s.
             {
                 MessageBox.Show("Sorry, this application cannot be configured.",
                        "ScreenSaver", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
